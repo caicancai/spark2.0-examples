@@ -30,7 +30,6 @@ object HdfsTest {
     val spark = SparkSession
       .builder
       .appName("HdfsTest")
-      .master("local[2]")
       .config("spark.sql.warehouse.dir",null)//这里需要设置spark,sql.warehouse
       .getOrCreate()
     val file = spark.read.text(args(0)).rdd

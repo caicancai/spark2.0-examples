@@ -44,7 +44,6 @@ object UserDefinedTypedAggregation {
     val spark = SparkSession
       .builder()
       .appName("Spark SQL basic example")
-      .master("local[2]")
       .config("spark.sql.warehouse.dir",null)
       .getOrCreate()
 
