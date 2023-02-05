@@ -27,7 +27,8 @@ object SparkSQLExample {
     val spark = SparkSession
       .builder()
       .appName("Spark SQL basic example")
-      .config("spark.sql.warehouse.dir", null)
+      .master("local[2]")
+      .config("spark.sql.warehouse.dir","E:\\spark\\badou_spark_26\\badou_spark_26\\spark-warehouse")
       .getOrCreate()
 
     // For implicit conversions like converting RDDs to DataFrames
